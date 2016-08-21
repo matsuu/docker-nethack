@@ -1,7 +1,7 @@
 docker-nethack
 ==============
 
-Dockerfile for Nethack 3.4.3
+Dockerfile for Nethack 3.6.0
 
 ## Howto
 
@@ -13,4 +13,4 @@ Dockerfile for Nethack 3.4.3
 
 ## References
 
-- [NetHack 3.4.3: Home Page](http://www.nethack.org/)
+- [NetHack 3.6.0: Home Page](http://www.nethack.org/)
