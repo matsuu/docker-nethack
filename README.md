@@ -1,4 +1,4 @@
-docker-nethack
+matsuu/nethack
 ==============
 
 Dockerfile for Nethack 3.6.0
@@ -9,8 +9,9 @@ Dockerfile for Nethack 3.6.0
 
 ## Build
 
-    docker build -t nethack .
+    docker build -t matsuu/nethack .
 
 ## References
 
 - [NetHack 3.6.0: Home Page](http://www.nethack.org/)
+- [matsuu/docker-nethack](https://github.com/matsuu/docker-nethack)
