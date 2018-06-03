@@ -1,7 +1,7 @@
 matsuu/nethack
 ==============
 
-Dockerfile for Nethack 3.6.0
+Dockerfile for Nethack 3.6.1
 
 ## Howto
 
@@ -13,5 +13,6 @@ Dockerfile for Nethack 3.6.0
 
 ## References
 
-- [NetHack 3.6.0: Home Page](http://www.nethack.org/)
-- [matsuu/docker-nethack](https://github.com/matsuu/docker-nethack)
+- [NetHack Home Page](http://www.nethack.org/)
+- GitHub [matsuu/docker-nethack](https://github.com/matsuu/docker-nethack)
+- Docker Hub [matsuu/nethack](https://hub.docker.com/r/matsuu/nethack/)
