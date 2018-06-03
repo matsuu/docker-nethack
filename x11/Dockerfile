@@ -3,7 +3,7 @@ FROM alpine
 ARG NH_VER=3.6.1
 
 RUN \
-  apk --no-cache add bdftopcf byacc curl flex gcc groff libxaw-dev libxt-dev linux-headers make mkfontdir musl-dev util-linux && \
+  apk --no-cache add bdftopcf byacc curl flex gcc groff libxaw-dev libxt-dev linux-headers make mkfontdir musl-dev ncurses-dev util-linux && \
   curl -sL https://nethack.org/download/${NH_VER}/nethack-${NH_VER//.}-src.tgz | tar zxf - && \
   ( \
     cd nethack-${NH_VER} && \
