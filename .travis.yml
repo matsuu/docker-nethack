@@ -1,0 +1,9 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+  - docker build -t the-image .
+  - docker run -td --name nethack the-image
+  - docker ps -f name=nethack
