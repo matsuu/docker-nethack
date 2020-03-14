@@ -1,18 +1,19 @@
 FROM alpine
 
-ARG NH_VER=3.6.1
+ARG NH_VER=3.6.6
 
 RUN \
   apk --no-cache add byacc curl flex gcc groff linux-headers make musl-dev ncurses-dev util-linux && \
-  curl -sL https://nethack.org/download/${NH_VER}/nethack-${NH_VER//.}-src.tgz | tar zxf - && \
+  ln -s libncurses.so /usr/lib/libtinfo.so && \
+  curl -sL https://nethack.org/download/${NH_VER}/nethack-${NH_VER//.}-src.tgz | tar zx && \
   ( \
-    cd nethack-${NH_VER} && \
+    cd NetHack-NetHack-${NH_VER}_Released && \
     sed -i -e 's/cp -n/cp/g' -e '/^PREFIX/s:=.*:=/usr:' sys/unix/hints/linux && \
     sh sys/unix/setup.sh sys/unix/hints/linux && \
     make all && \
     make install \
   ) && \
-  rm -rf nethack-${NH_VER}
+  rm -rf NetHack-NetHack-${NH_VER}_Released
 
 # for backup
 VOLUME /usr/games/lib/nethackdir
