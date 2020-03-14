@@ -1,7 +1,7 @@
 matsuu/nethack-x11
 ==================
 
-Dockerfile for Nethack 3.6.0 X11
+Dockerfile for Nethack 3.6.6 X11
 
 ## Howto
 
@@ -19,5 +19,5 @@ Dockerfile for Nethack 3.6.0 X11
 
 ## References
 
-- [NetHack 3.6.0: Home Page](http://www.nethack.org/)
+- [NetHack Home Page](http://www.nethack.org/)
 - [matsuu/docker-nethack](https://github.com/matsuu/docker-nethack)
