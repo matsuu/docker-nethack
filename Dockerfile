@@ -3,7 +3,8 @@ FROM alpine
 ARG NH_VER=3.6.6
 
 RUN \
-  apk --no-cache add byacc curl flex gcc groff linux-headers make musl-dev ncurses-dev util-linux && \
+  apk add ncurses && \
+  apk add --virtual .build byacc curl flex gcc groff linux-headers make musl-dev ncurses-dev util-linux && \
   ln -s libncurses.so /usr/lib/libtinfo.so && \
   curl -sL https://nethack.org/download/${NH_VER}/nethack-${NH_VER//.}-src.tgz | tar zx && \
   ( \
@@ -13,7 +14,8 @@ RUN \
     make all && \
     make install \
   ) && \
-  rm -rf NetHack-NetHack-${NH_VER}_Released
+  rm -rf NetHack-NetHack-${NH_VER}_Released && \
+  apk del --purge .build
 
 # for backup
 VOLUME /usr/games/lib/nethackdir
