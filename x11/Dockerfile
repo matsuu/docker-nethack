@@ -3,7 +3,8 @@ FROM alpine
 ARG NH_VER=3.6.6
 
 RUN \
-  apk --no-cache add bdftopcf byacc curl flex gcc groff libxaw-dev libxt-dev linux-headers make mkfontdir musl-dev ncurses-dev util-linux && \
+  apk add ncurses libxaw libxt && \
+  apk add --virtual .build bdftopcf byacc curl flex gcc groff libxaw-dev libxt-dev linux-headers make mkfontdir musl-dev ncurses-dev util-linux && \
   ln -s libncurses.so /usr/lib/libtinfo.so && \
   curl -sL https://nethack.org/download/${NH_VER}/nethack-${NH_VER//.}-src.tgz | tar zxf - && \
   ( \
@@ -13,7 +14,10 @@ RUN \
     make all && \
     make install \
   ) && \
-  rm -rf NetHack-NetHack-${NH_VER}_Released
+  rm -rf NetHack-NetHack-${NH_VER}_Released && \
+  apk del --purge .build
+
+ENV DISPLAY=host.docker.internal:0
 
 # for backup
 VOLUME /usr/games/lib/nethackdir
