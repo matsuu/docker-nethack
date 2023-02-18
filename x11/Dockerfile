@@ -1,6 +1,6 @@
 FROM alpine
 
-ARG NH_VER=3.6.6
+ARG NH_VER=3.6.7
 
 RUN \
   apk add ncurses libxaw libxt && \
@@ -8,7 +8,7 @@ RUN \
   ln -s libncurses.so /usr/lib/libtinfo.so && \
   curl -sL https://nethack.org/download/${NH_VER}/nethack-${NH_VER//.}-src.tgz | tar zxf - && \
   ( \
-    cd NetHack-NetHack-${NH_VER}_Released && \
+    cd NetHack-${NH_VER} && \
     sed -i -e 's/cp -n/cp/g' -e '/^PREFIX/s:=.*:=/usr:' sys/unix/hints/linux-x11 && \
     sh sys/unix/setup.sh sys/unix/hints/linux-x11 && \
     make all && \
