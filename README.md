@@ -1,7 +1,7 @@
 matsuu/nethack
 ==============
 
-Dockerfile for Nethack 3.6.6
+Dockerfile for Nethack 3.6.7
 
 ## Howto
 
