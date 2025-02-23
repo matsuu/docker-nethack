@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:3.19
 
 ARG NH_VER=3.6.7
 
