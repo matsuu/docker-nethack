@@ -5,7 +5,10 @@ Dockerfile for Nethack 3.6.7
 
 ## Howto
 
+    # Docker Hub
     docker run -it matsuu/nethack
+    # GitHub Packages Docker Registry
+    docker run -it ghcr.io/matsuu/nethack
 
 ## Build
 
