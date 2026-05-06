@@ -1,18 +1,27 @@
 matsuu/nethack
 ==============
 
-Dockerfile for Nethack 3.6.7
+Dockerfile for Nethack 5.0.0
 
-## Howto
+## Usage
 
-    # Docker Hub
-    docker run -it matsuu/nethack
-    # GitHub Packages Docker Registry
-    docker run -it ghcr.io/matsuu/nethack
+### 1. Classic TTY (Default)
+
+```sh
+docker run -it matsuu/nethack
+```
+
+### 2. Curses Interface
+
+```sh
+docker run -it matsuu/nethack --windowtype:curses
+```
 
 ## Build
 
-    docker build -t matsuu/nethack .
+```sh
+docker build -t matsuu/nethack .
+```
 
 ## References
 

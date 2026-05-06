@@ -1,16 +1,27 @@
 matsuu/nethack-x11
 ==================
 
-Dockerfile for Nethack 3.6.6 X11
+Dockerfile for Nethack 5.0.0 X11
 
-## Howto
+## Usage
 
-    docker run -d matsuu/nethack-x11
+### X11 (Default)
 
+```sh
+docker run -d matsuu/nethack-x11
+```
+
+### Qt Interface
+
+```sh
+docker run -d matsuu/nethack-x11 --windowtype:Qt
+```
 
 ## Build
 
-    docker build -t matsuu/nethack-x11 .
+```sh
+docker build -t matsuu/nethack-x11 .
+```
 
 ## References
 
